@@ -7,7 +7,7 @@ const SignInPage = () => {
       <SignIn
         path="/sign-in"
         signUpUrl="/sign-up"
-        forceRedirectUrl="https://synapse-ai-beta.vercel.app/dashboard"
+        forceRedirectUrl="/dashboard"
       />
     </div>
   );
