@@ -38,7 +38,7 @@ const imagekit = new ImageKit({
   privateKey: process.env.IMAGE_KIT_PRIVATE_KEY,
 });
 app.get("/", (req, res) => {
-
+console.log("CLERK KEY "+process.env.CLERK_PUBLISHABLE_KEY)
   res.send("service running well");
 });
 app.get("/api/upload", (req, res) => {
