@@ -99,10 +99,11 @@ app.post("/api/chats", ClerkExpressRequireAuth(), async (req, res) => {
 
 app.get("/api/userchats", ClerkExpressRequireAuth(), async (req, res) => {
   const userId = req.auth.userId;
+console.log("Recieved user chats request "+userId)
 
   try {
     const userChats = await UserChats.find({ userId });
-
+    console.log("Got userchats "+userChats)
     res.status(200).send(userChats[0].chats);
   } catch (err) {
     console.log(err);
@@ -161,9 +162,9 @@ app.use((err, req, res, next) => {
 // PRODUCTION
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
+// });
 
 app.listen(port, () => {
   connect();
