@@ -102,7 +102,7 @@ app.get("/api/userchats", async (req, res) => {
 console.log("Recieved user chats request "+userId)
 
   try {
-    const userChats = await UserChats.findById( userId );
+    const userChats = await UserChats.find( {userId:userId} );
     console.log("Got userchats "+userChats)
     res.status(200).send(userChats[0].chats);
   } catch (err) {
@@ -138,7 +138,7 @@ app.put("/api/chats/:id",  async (req, res) => {
 
   try {
     const updatedChat = await Chat.updateOne(
-      { _id: req.params.id, userId },
+      { _id: req.params.id, userId:userId },
       {
         $push: {
           history: {
