@@ -8,7 +8,7 @@ import Chat from "./models/chat.js";
 import UserChats from "./models/userChats.js";
 import { ClerkExpressRequireAuth, requireAuth } from "@clerk/clerk-sdk-node";
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -46,7 +46,7 @@ app.get("/api/upload", (req, res) => {
   res.send(result);
 });
 
-app.post("/api/chats", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
+app.post("/api/chats", ClerkExpressRequireAuth(), async (req, res) => {
   const userId = req.auth.userId;
   const { text } = req.body;
 
@@ -97,7 +97,7 @@ app.post("/api/chats", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}
   }
 });
 
-app.get("/api/userchats", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
+app.get("/api/userchats",ClerkExpressRequireAuth(), async (req, res) => {
   const userId = req.auth.userId;
 console.log("Recieved user chats request "+userId)
 
@@ -111,7 +111,7 @@ console.log("Recieved user chats request "+userId)
   }
 });
 
-app.get("/api/chats/:id", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
+app.get("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
   const userId = req.auth.userId;
 
   try {
@@ -124,7 +124,7 @@ app.get("/api/chats/:id", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-u
   }
 });
 
-app.put("/api/chats/:id", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
+app.put("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
   const userId = req.auth.userId;
 
   const { question, answer, img } = req.body;
@@ -156,7 +156,7 @@ app.put("/api/chats/:id", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-u
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(401).send("Unauthenticated!");
+  res.status(401).send(err);
 });
 
 // PRODUCTION
@@ -168,5 +168,5 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.listen(port, () => {
   connect();
-  console.log("Server running on 3000");
+  console.log("Server running on "+port);
 });
