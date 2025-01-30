@@ -102,7 +102,7 @@ app.get("/api/userchats", async (req, res) => {
 console.log("Recieved user chats request "+userId)
 
   try {
-    const userChats = await UserChats.find({ userId });
+    const userChats = await UserChats.findById({ userId });
     console.log("Got userchats "+userChats)
     res.status(200).send(userChats[0].chats);
   } catch (err) {
