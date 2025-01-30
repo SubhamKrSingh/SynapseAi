@@ -6,7 +6,7 @@ import ImageKit from "imagekit";
 import mongoose from "mongoose";
 import Chat from "./models/chat.js";
 import UserChats from "./models/userChats.js";
-import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
+import { ClerkExpressRequireAuth, requireAuth } from "@clerk/clerk-sdk-node";
 
 const port = process.env.PORT || 3000;
 const app = express();
@@ -46,7 +46,7 @@ app.get("/api/upload", (req, res) => {
   res.send(result);
 });
 
-app.post("/api/chats", ClerkExpressRequireAuth(), async (req, res) => {
+app.post("/api/chats", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
   const userId = req.auth.userId;
   const { text } = req.body;
 
@@ -97,7 +97,7 @@ app.post("/api/chats", ClerkExpressRequireAuth(), async (req, res) => {
   }
 });
 
-app.get("/api/userchats", ClerkExpressRequireAuth(), async (req, res) => {
+app.get("/api/userchats", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
   const userId = req.auth.userId;
 console.log("Recieved user chats request "+userId)
 
@@ -111,7 +111,7 @@ console.log("Recieved user chats request "+userId)
   }
 });
 
-app.get("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
+app.get("/api/chats/:id", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
   const userId = req.auth.userId;
 
   try {
@@ -124,7 +124,7 @@ app.get("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
   }
 });
 
-app.put("/api/chats/:id", ClerkExpressRequireAuth(), async (req, res) => {
+app.put("/api/chats/:id", requireAuth({signInUrl:process.env.CLIENT_URL+"/sign-up"}), async (req, res) => {
   const userId = req.auth.userId;
 
   const { question, answer, img } = req.body;
