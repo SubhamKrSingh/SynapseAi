@@ -41,9 +41,11 @@ app.get("/", (req, res) => {
 console.log("CLERK KEY "+process.env.CLERK_PUBLISHABLE_KEY)
   res.send("service running well");
 });
-app.get("/api/upload", (req, res) => {
+app.get("/api/upload", (req, res) => {console.log("haha");
   const result = imagekit.getAuthenticationParameters();
+  console.log("haha"+result);
   res.send(result);
+
 });
 
 app.post("/api/chats", async (req, res) => {
