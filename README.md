@@ -2,8 +2,8 @@
 
 [![Synapse AI Demo Video](https://img.shields.io/badge/Demo%20Video-Watch%20on%20LinkedIn-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/posts/subhamsingh02_ai-chatbot-videodemo-activity-7294019649782829057-zBHY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3IsgIB575OMPlOO6NS2Tih4l-BW8MVLUQ)
 
-[![Synapse AI - Chat Interface](https://github.com/user-attachments/assets/3bc8c553-0c76-44ea-b0df-6d23aca0d80e)](https://github.com/user-attachments/assets/3bc8c553-0c76-44ea-b0df-6d23aca0d80e)
-[![Synapse AI - Image Upload Feature](https://github.com/user-attachments/assets/1b2ffeb9-1d0f-4213-a5f3-a03accbdb30b)](https://github.com/user-attachments/assets/1b2ffeb9-1d0f-4213-a5f3-a03accbdb30b)
+[![Synapse AI - Chat Interface](https://github.com/user-attachments/assets/4fe9c192-222f-4c38-91ef-5c2cd452b408)
+
 
 
 ## 👋 Introduction
