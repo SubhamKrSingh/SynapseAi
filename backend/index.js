@@ -8,7 +8,7 @@ import Chat from "./models/chat.js";
 import UserChats from "./models/userChats.js";
 import { ClerkExpressRequireAuth, requireAuth } from "@clerk/clerk-sdk-node";
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3001 
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
