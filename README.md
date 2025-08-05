@@ -1,4 +1,4 @@
-# **Synapse AI – Your Intelligent Conversational & Image AI Companion** 🚀
+# **Synapse AI – Your Intelligent Conversational & Image AI Companion** 
 
 Synapse AI is an advanced chatbot that seamlessly combines **text-based conversations** and **image analysis**, delivering an intelligent and interactive experience. Built with cutting-edge technologies and AI APIs, Synapse AI is designed to help users communicate naturally and explore visual content effortlessly.
 
