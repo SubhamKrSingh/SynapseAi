@@ -1,9 +1,7 @@
 # Synapse AI - Your Intelligent Conversational & Image AI Companion 🚀
 
 
-## 👋 Introduction
 
-Welcome to the GitHub repository for **Synapse AI**, a personal project showcasing a full-stack AI Chatbot with powerful conversational and image analysis capabilities!
 
 Synapse AI is designed to provide a seamless and helpful user experience by understanding both text-based queries and visual content. This project has been a fantastic journey in exploring modern web development technologies and harnessing the power of cutting-edge AI APIs.
 
