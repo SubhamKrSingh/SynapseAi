@@ -1,10 +1,5 @@
 # Synapse AI - Your Intelligent Conversational & Image AI Companion 🚀
 
-[![Synapse AI Demo Video](https://img.shields.io/badge/Demo%20Video-Watch%20on%20LinkedIn-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/posts/subhamsingh02_ai-chatbot-videodemo-activity-7294019649782829057-zBHY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3IsgIB575OMPlOO6NS2Tih4l-BW8MVLUQ)
-
-[![Synapse AI - Chat Interface](https://github.com/user-attachments/assets/4fe9c192-222f-4c38-91ef-5c2cd452b408)
-
-
 
 ## 👋 Introduction
 
@@ -18,6 +13,11 @@ Synapse AI is designed to provide a seamless and helpful user experience by unde
 * **Trusted by 150+ Unique Users!** 🎉
 * **Intelligent Conversational AI:** Powered by Gemini API for context-aware and insightful responses.
 * **Image Analysis Capabilities:** Upload images and ask Synapse AI questions about their content! 🖼️
+[![Synapse AI Demo Video](https://img.shields.io/badge/Demo%20Video-Watch%20on%20LinkedIn-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/posts/subhamsingh02_ai-chatbot-videodemo-activity-7294019649782829057-zBHY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3IsgIB575OMPlOO6NS2Tih4l-BW8MVLUQ)
+
+[![Synapse AI - Chat Interface](https://github.com/user-attachments/assets/4fe9c192-222f-4c38-91ef-5c2cd452b408)
+
+
 
 ## 🎬 Demo - See Synapse AI in Action!
 
